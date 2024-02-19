@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="Index.js"></script>
+    <script src="buttons.js"></script>
+
+    <script src="Validation.js"></script>
+</head>
+
+
+<body>
+    <!-- <script type="module" src="index.js"></script>
+    <script type="module" src="button.js"></script> -->
+    <div class="header">
+        <div class="heading">
+            <img class="saketa-img" src="./Image/saketa.png" />
+            <h1 class="saketa">Saketa</h1>
+            <div class="Employee_Directory">
+                <h1>Employee Directory</h1>
+                <h4>The Utlimate Pepole Directory Experience</h4>
+            </div>
+            <div class="Welcome">
+                <span class="welcome-text">Welcome</span>, Andrew Philips <img class="photo" src="./Image/photo2.png">
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="container">
+            <div class="left_container">
+                <div class="left_container_subpart">
+                    <h4>Department</h4>
+                    <div class="left_container_subpart" id="departmentButtonsContainer">
+
+
+                        <!-- Department buttons will be generated here dynamically -->
+                    </div>
+
+
+                </div>
+                <div class="left_container_subpart">
+                    <h4>Offices</h4>
+                    <div class="left_container_subpart" id="officeButtonsContainer">
+
+
+                        <!-- Offices buttons will be generated here dynamically -->
+                    </div>
+                </div>
+                <div class="left_container_subpart">
+                    <h4>Job Titles</h4>
+                    <div class="left_container_subpart" id="jobTitleButtonsContainer">
+
+
+                        <!-- job title buttons will be generated here dynamically -->
+                    </div>
+                </div>
+                <div class="left_container_subpart"></div>
+
+            </div>
+            <div class="right_conatiner">
+                <!--1 -->
+                <div class="alphabet-buttons" id="alphabetButtons">
+                    <!-- Buttons will be generated here dynamically -->
+                </div>
+                <!--2 -->
+                <div class="right_conatiner_subpart">
+                    <div class="search-container">
+                        <h3>Search</h3>
+                        <input type="text" id="searchInput" placeholder="Enater Any Keyword...">
+                        <!-- <button onclick="performSearch()" id="search">Clear</button> -->
+                        <button onclick="performSearch()" id="search">Search</button>
+
+                    </div>
+                    <div class="filter_container">
+                        <h3>Filter by</h3>
+                        <select id="searchDropdown">
+                            <option value="option1">Preferred Name</option>
+                            <option value="option2">Department</option>
+                            <option value="option3">Job Title</option>
+                        </select>
+                    </div>
+                    <div class="btn-employee">
+                        <button id="add_Employee">Add Employee</button>
+                    </div>
+                </div>
+                <!--3 -->
+                <div class="note">
+                    <span class="notespam">Note:</span>Please use the adavanced filter option to refine your result.
+                </div>
+                <!--4 -->
+                <div class="mainPannel">
+                    <!-- <div class="Employee_info">
+                        <div class="empolyee_img">
+                            <img class="img_employee-img" src="./Image/employee.png">
+                        </div>
+                        <div class="employee_data">
+                            <span>
+                                <h4>Sanjiv</h4>
+                                <h4 style="margin-left: 4px ">Shinde</h4>
+                            </span>
+                       
+                            <span class="job_title">CRM D365 Develpoer </span>
+                            <span class="develpoer">IT Department</span>
+                        </div>
+
+                    </div> -->
+                </div>
+                <div class="form">
+                    <form id="employee_form">
+                        <div class=emplyee_heading>
+                            <h1>Employee Information</h1>
+                            <img class="btncancle" src="./Image/Cancle_Button.jpg">
+                        </div>
+
+
+                        <div class="employee_row">
+                            <div class="employee_information">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname">
+                            </div>
+
+                            <div class="employee_information">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname">
+                            </div>
+                        </div>
+
+                        <div class="employee_row">
+                            <div class="employee_information">
+                                <label for="email">Email</label>
+                                <input type="text" id="email">
+                            </div>
+
+                            <div class="employee_information">
+                                <label for="job_title">Job Title</label>
+                                <input type="text" id="job_title">
+                            </div>
+                        </div>
+
+                        <div class="employee_row">
+                            <div class="employee_information">
+                                <label for="office">Office</label>
+                                <input type="text" id="office">
+                            </div>
+
+                            <div class="employee_information">
+                                <label for="Department">Department</label>
+                                <input type="text" id="Department">
+                            </div>
+                        </div>
+
+                        <div class="employee_row">
+                            <div class="employee_information">
+                                <label for="phone_number">Phone Number</label>
+                                <input type="text" id="phone_number">
+                            </div>
+
+                            <div class="employee_information">
+                                <label for="Skype">Skype ID</label>
+                                <input type="text" id="Skype">
+                            </div>
+                        </div>
+
+                        <!-- Add more rows as needed -->
+                        <div class="buttons">
+                            <input type="submit" id="btcancle" value="Cancle" />
+                            <input type="submit" id="btnadd" value="Add" />
+                            <input type="submit" id="btndelete" value="Delete" style="display: none;" />
+                            <input type="submit" id="btnupdate" value="Update" style="display: none;" />
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
